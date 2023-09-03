@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb # URL do banco de dados H2 em memória
+    driver-class-name: org.h2.Driver # Classe do driver JDBC para o H2
+    username: sa  # Nome de usuário do banco de dados
+    password:     # Senha do banco de dados (vazio no exemplo)
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect  # Plataforma de banco de dados para o JPA (H2)
+    hibernate:
+      ddl-auto: create-drop # Estratégia de criação/descarte de tabelas pelo Hibernate
+  rabbitmq:         # Configurações relacionadas ao RabbitMQ (Message Broker)
+    host: localhost # Endereço do servidor RabbitMQ
+    port: 5672      # Porta do servidor RabbitMQ
+
+server:
+  port: 8080        # Porta em que o servidor embutido do Spring Boot será executado
+
+  
